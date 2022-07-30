@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "font_backend": {
+      "main": "src/font_backend/main.mo",
+      "type": "motoko"
+    },
+    "font_frontend": {
+      "dependencies": [
+        "font_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/font_frontend/src/index.html"
+      },
+      "source": [
+        "src/font_frontend/assets",
+        "dist/font_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
